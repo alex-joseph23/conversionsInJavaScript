@@ -19,14 +19,14 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = "5" - 2; /*This Covers implicit conversion cause JavaScript converts the string to a number for you.*/
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let isValid = Boolean("false"); /*This is an edge case because non empty strings in java script are always true so even though it says false it is valid.*/
 if (isValid) {
     console.log("This is valid!");
 }
 
-let age = "25";
+let age = Number("25"); /*Wrapping this string with a number conversions so that on line 31 the types are the same. This would also be an explicit conversion.*/
 let totalAge = age + 5;
 console.log("Total Age: " + totalAge);
