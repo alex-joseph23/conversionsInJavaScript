@@ -19,14 +19,40 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2; /*This Covers implicit conversion cause JavaScript converts the string to a number for you.*/
+let result = "5" - 2; //Correct:*This Covers implicit conversion cause JavaScript converts the string to a number for you.*/
 console.log("The result is: " + result);
 
-let isValid = Boolean("false"); /*This is an edge case because non empty strings in java script are always true so even though it says false it is valid.*/
+let isValid = Boolean("false"); //Correct:*This is an edge case because non empty strings in java script are always true so even though it says false it is valid.*/
 if (isValid) {
     console.log("This is valid!");
 }
 
-let age = Number("25"); /*Wrapping this string with a number conversions so that on line 31 the types are the same. This would also be an explicit conversion.*/
-let totalAge = age + 5;
+let age = Number("25"); //Incorrect:*Wrapping this string with a number conversions so that on line 31 the types are the same. This would also be an explicit conversion.*/
+let totalAge = Number(age) + 5;
 console.log("Total Age: " + totalAge);
+
+*/ Examples /*
+
+let runs = "4";      // runs is a string
+let outs = 2;        // outs is a number
+
+let inningUpdate = runs - outs;
+console.log("Inning Update: " + inningUpdate); 
+__________________________________________________________
+let errors = null;
+let totalErrors = errors + 1; 
+console.log("Total Errors: " + totalErrors);
+__________________________________________________________
+
+let battingAverageStr = "0.300";
+let battingAverage = Number(battingAverageStr);
+
+console.log("Batting Average: " + battingAverage);
+
+
+
+
+
+
+
+  
